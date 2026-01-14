@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    long  int a,b,c,d ,y;
+    long long a,b,c,d ,y;
     cin>>a>>b>>c>>d;
     
     // long int x= a*b*c*d;
@@ -12,10 +12,11 @@ int main()
 
     // x%10 for last digit
     //x%1000 for last 3 digits etc.
-     long int res =a;
+     long long res =a;
      res= (res*b)%100;
      res=(res*c)%100; // to avoid overflow
      res= (res*d)%100; 
+     if (res < 10) cout << '0'; // add leading zero if needed
      cout << res;
     
     //cout<<y;
